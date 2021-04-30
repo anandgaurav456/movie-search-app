@@ -1,0 +1,111 @@
+.movieDetails{
+    text-align: center;
+}
+.plot {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.card-img-top {
+    height: 350px;
+    width: 250px;
+}
+.middle-container{
+    padding-left: 10px;
+}
+.poster{
+    height: 400px;
+    width: 300px;
+}
+.bottom-container{
+    text-align: center;
+    background-color: black;
+    color: #928a97;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.contact-me{
+    margin: 20px;
+}
+
+.top{
+    background-color: black;
+    margin-bottom: 50px;
+    margin-top: 55px;
+    color: white;
+    height: 230px;
+    text-align: center;
+}
+
+.logo{
+    background-size:cover;
+}
+
+.b-name{
+    margin-bottom: 0;
+}
+
+.btn-contact {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+  color: #ffffff;
+  font-size: 20px;
+  background: #000000;
+  padding: 5px 6px 6px 5px;
+  text-decoration: none;
+}
+
+.btn-contact:hover {
+  background: grey;
+  color: white;
+  text-decoration: none;
+}
+
+.designation{
+    color: grey;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-link{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about{
+    margin-right: 230px;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+.dp{
+    height: 180px;
+    float: left;
+    margin-left: 200px;
+    margin-right: 20px;
+}
+
+.jumbotron{
+    text-align: center;
+}
+
+hr {
+    margin-top: 100px;
+    margin-bottom:100px;
+    border-style: none;
+    border-top-style: dotted;
+    width: 10%;
+    border-width: 7px;
+    border-color: #928a97;
+    clear: left;
+}
+body {
+    margin-top: 55px;
+}
+
+.creds{
+    margin-left: 10px;
+}

@@ -1,0 +1,28 @@
+<%- include("./partials/header") %>
+    <h1>Search Results:</h1>
+
+    <div class="row">
+        <%movieData['Search'].forEach(function (movie) { %>
+            <div class="card" style="width: 15rem;">
+                <% if(movie.Poster == 'N/A') { %>
+                    <img src="/assets/NA.png" class="card-img-top"  alt="NA">
+                <%} else {%> 
+                <img src="<%= movie.Poster %>" class="card-img-top" alt="NA">
+                <% } %> 
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= movie.Title%>
+                    </h5>
+                    <p class="card-text">
+                        <%= movie.Plot %>
+                    </p>
+                    <a href="/result/<%= movie.imdbID %>" class="btn btn-primary">Read More</a>
+                </div>
+
+            </div>
+            <% }); %>
+
+    </div>
+
+
+    <%- include("./partials/footer") %>

@@ -1,0 +1,28 @@
+<%- include("./partials/header") %>
+<h1>New User Regsitration</h1>
+<form action="/register" method="POST">
+    <div class="creds">
+        <div class="form-group">
+            <label for="name">Enter Full Name: </label>
+          <input type="text"  placeholder="Name" name="fullname">
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Email: </label>
+          <input type="email"  placeholder="Email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Age: </label>
+          <input type="text"  placeholder="Age" name="age">
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Password: </label>
+          <input type="password" name="password" placeholder="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br>
+        Already User?
+        <a href="/login"> Login</a>
+
+    </div>
+
+  </form>   
+<%- include("./partials/footer") %>

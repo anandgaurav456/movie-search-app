@@ -1,0 +1,22 @@
+<%- include("./partials/header") %>
+    <div class="movieDetails">
+        <h1><%= movieData.Title%>,(<%= movieData.Year %>) </h1>
+        <% if(movieData.Poster == 'N/A') { %>
+            <img class="poster" src="/assets/NA.png"  alt="NA">
+        <%} else {%> 
+        <img  src="<%= movieData.Poster %>"  alt="NA">
+        <% } %> 
+            <p class="plot">
+                <%= movieData.Plot %>
+            </p>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item"><b>IMdB Rating <img src="/assets/star2.png" alt=""> : </b> <%= movieData.imdbRating %>  </li>
+            <li class="list-group-item"><b>Genre: </b> <%= movieData.Genre %> </li>
+            <li class="list-group-item"><b>Director: </b> <%= movieData.Director %></li>
+            <li class="list-group-item"><b>Actors: </b> <%= movieData.Actors %></li>
+            <li class="list-group-item"><b>Production: </b> <%= movieData.Production %></li>
+          </ul>
+        <!-- <% console.log(movieData) %>  -->
+
+<%- include("./partials/footer") %>
