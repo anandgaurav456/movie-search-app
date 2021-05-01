@@ -2,9 +2,11 @@ const express = require('express');
 const colors = require('colors');
 const request = require('request');
 const mongoose = require('mongoose');
+const passport = require('passport');
 const flash = require('connect-flash')
 const session = require('express-session')
-require('dotenv').config()
+const LocalStrategy = require("passport-local").Strategy;
+require('dotenv').config()  
 /*
 EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
 No religiousness about how to organize things. 
@@ -17,6 +19,9 @@ app.set('views engine', 'ejs')
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
+
+// Passport Config
+require('./config/passport')(passport);
 
 // Express session
 app.use(session({
@@ -32,8 +37,13 @@ app.use(flash())
 app.use((req,res,next)=> {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.error_msg = req.flash('error_msg')
+    res.locals.error = req.flash('error')
     next();
 })
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
