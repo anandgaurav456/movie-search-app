@@ -14,7 +14,7 @@ router.get("/aboutme", (req, res) => {
 
 // Search Results Route
 app.get("/result", (req, res) => {
-  movieName = req.query["movieName"];
+  const movieName = req.query["movieName"];
   const url = `http://www.omdbapi.com/?apikey=${process.env.apikey}&s=${movieName}}`;
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -31,7 +31,7 @@ app.get("/result", (req, res) => {
   });
 });
 app.get("/result/:id", (req, res) => {
-  movieID = req.params.id;
+  const movieID = req.params.id;
   const url = `http://www.omdbapi.com/?apikey=${process.env.apikey}&i=${movieID}`;
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
